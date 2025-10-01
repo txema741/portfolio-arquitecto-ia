@@ -1,4 +1,4 @@
-# Nivel 3 — Técnico-validado (FinTech)
+# Nivel 3 — Técnico Validado (FinTech)
 
 ## Rol
 Actúa como **consultor senior en regulación financiera y pagos digitales UE**, con foco en licencias cripto-fiat.
@@ -12,31 +12,37 @@ Normativa: **MiCA**, **PSD2**, **AMLD5/6**, **NIS2**, **GDPR**.
 ## Instrucciones
 1. Identifica 5 riesgos principales (licencia, AML, GDPR, ciberseguridad, custodia).  
 2. Cuantifica impacto (€/%) en costes y retrasos.  
-3. Construye 3 escenarios (optimista, realista, crítico).  
+3. Escenarios financieros (optimista, realista, crítico).  
 4. Tabla Top-5 riesgos.  
-5. Checklist: licencias, KYC/AML, SCA, ciberseguridad (NIS2), custodia cripto.  
+5. Checklist: licencias, KYC/AML, SCA, ciberseguridad, custodia.  
 6. Restricciones: no inventar; citar normativa exacta.
 
-## Formato esperado
-| # | Riesgo | Norma/Art. | Impacto | Prob. | Mitigación (3 bullets) | Confianza |
+## Tabla Top-5 Riesgos
+| # | Riesgo | Norma/Art. | Impacto | Prob. | Mitigación | Confianza |
+|---|--------|------------|---------|-------|------------|-----------|
+| 1 | Licencia retrasada/denegada | MiCA, PSD2 Art. 11 | Retraso 6–12m; 1–2 M€ costes extra | Media | • Pre-filing • Roadmap • Asesoría | 4/5 |
+| 2 | AML deficiente | AMLD5/6 Art. 10 | Multas hasta 10 % ingresos | Alta | • KYC reforzado • Auditoría AML • Monitorización | 5/5 |
+| 3 | GDPR incumplido | GDPR Arts. 6, 32, 35 | Multa hasta 4 % turnover | Media | • DPIA • Cifrado • Privacy by design | 5/5 |
+| 4 | Ciberseguridad | NIS2 Arts. 21–23 | Pérdida ≥5 % ingresos | Media-Alta | • SOC 24/7 • Pen-testing • Plan incidentes | 4/5 |
+| 5 | Custodia criptoactivos | MiCA Título V | Riesgo solvencia | Baja-Media | • Segregación activos • Seguros • Auditoría externa | 3/5 |
 
-### Supuestos y Sensibilidad
+## Supuestos y Sensibilidad
 - Coste licencia inicial __M€  
 - Coste KYC/cliente __€  
 - Adopción anual __%  
 - Conversión ±20% → Δrunway [__, __]  
-- Coste cumplimiento +30% → ΔNPV [__, __]  
+- Cumplimiento +30% → ΔNPV [__, __]  
 - Retraso licencia +6/+12m → Δliquidez [__, __]
 
-## Problemas del N3
+## Problemas del Nivel 3
 - Subestima ciberataques avanzados.  
-- Supuestos de crecimiento poco realistas.  
-- Sin comparativa multi-jurisdicción.  
+- Supuestos de crecimiento optimistas.  
+- Sin comparativa internacional.
 
 ## Por qué N4 es mejor
-- Añade benchmark internacional (UE/UK/USA).  
-- PESTEL y ESG.  
-- Roadmap 5 años con KPIs estratégicos (LTV/CAC, churn, resiliencia ciber).
+- Añade benchmark UE/UK/USA.  
+- PESTEL + ESG.  
+- Roadmap 5 años con KPIs estratégicos.
 
 ## Observaciones
-N3 es útil para VC y reguladores; N4 lo transforma en plan de escalado internacional.
+N3 es útil para VC y reguladores; N4 lo convierte en plan internacional.
