@@ -1,45 +1,36 @@
-## 🩺 Caso Health-Tech — Nuevo medicamento en un hospital
+# Nivel 1 — Descriptivo (Health-Tech)
 
-### 📝 Prompt
-Explica los riesgos de usar un nuevo medicamento en un hospital.
-
-
-### 📤 Salida esperada (ejemplo de IA)
-- **Riesgos de efectos secundarios:** reacciones adversas desconocidas o más graves de lo previsto.  
-- **Riesgos de interacciones medicamentosas:** posibilidad de efectos no deseados al combinarse con fármacos habituales en pacientes hospitalizados.  
-- **Riesgos de eficacia limitada:** el medicamento puede no alcanzar la efectividad esperada en determinados grupos de pacientes.  
-- **Riesgos regulatorios:** necesidad de cumplir con los protocolos de autorización y aprobación de medicamentos.  
-- **Riesgos financieros:** costes adicionales para el hospital si el medicamento resulta caro o no está cubierto por el sistema sanitario.  
-- **Riesgos operativos:** necesidad de formar al personal en el uso y administración del nuevo medicamento.  
+## 📖 Descripción
+El sector **Health-Tech** usa IA para apoyo clínico, análisis de imágenes médicas, gestión hospitalaria y descubrimiento de fármacos.  
+En este nivel, un prompt descriptivo solo genera respuestas superficiales sobre riesgos médicos y regulatorios, sin citar estudios clínicos ni normativa sanitaria.
 
 ---
 
-## ⚠️ Problemas del Nivel 1 (Health-Tech)
-1. **Excesiva generalidad**  
-   - No distingue entre medicamentos experimentales, genéricos o de uso compasivo.  
-   - No considera el tipo de hospital (pequeño vs universitario).  
+## 📝 Prompt
 
-2. **Falta de normativas concretas**  
-   - No menciona a la **EMA** (Agencia Europea de Medicamentos), **FDA** (Food and Drug Administration) o regulaciones locales de farmacovigilancia.  
-
-3. **Ausencia de evidencia científica**  
-   - No cita ensayos clínicos ni publicaciones revisadas por pares.  
-   - No hace referencia a las fases de aprobación (I, II, III, IV).  
-
-4. **No incluye protocolos hospitalarios**  
-   - Omite la necesidad de **comités de ética clínica** o **protocolos internos** antes de introducir un fármaco.  
-
-5. **Inutilidad práctica**  
-   - Un comité hospitalario no podría usar esta respuesta para aprobar un medicamento.  
-   - Solo funciona como brainstorming muy general.  
+Explica los posibles riesgos de introducir un nuevo medicamento en un hospital público.
 
 ---
 
-## 🔎 Observaciones finales
-- El **Nivel 1 — Descriptivo** es un ejercicio útil para ver cómo responde la IA con prompts mínimos.  
-- Sin embargo, es **demasiado limitado** para cualquier aplicación profesional.  
-- Es un **punto de partida pedagógico** para avanzar hacia:  
-  - Nivel 2 — Contextualizado (añadir rol, escenario y contexto).  
-  - Nivel 3 — Técnico Validado (introducir reglas anti-alucinación).  
-  - Nivel 4 — Ejecutivo Estructurado (outputs orientados a decisiones).  
-  - Nivel 5 — Arquitectónico Maestro (QA, ética y trazabilidad).
+## 📤 Salida esperada (ejemplo de IA)
+- **Efectos secundarios desconocidos:** posibilidad de reacciones adversas imprevistas en pacientes.  
+- **Interacciones medicamentosas:** combinaciones peligrosas con otros tratamientos comunes.  
+- **Eficacia incierta:** el medicamento puede no mostrar los resultados clínicos esperados en la práctica.  
+- **Costes económicos elevados:** riesgo de que el fármaco no esté cubierto por el sistema sanitario, generando tensiones presupuestarias.  
+- **Necesidad de formación del personal:** dificultad de los sanitarios para usar correctamente el nuevo fármaco.  
+- **Retrasos regulatorios:** el medicamento puede estar aprobado de forma provisional, con restricciones adicionales.  
+
+---
+
+## ⚠️ Problemas del Nivel 1
+1. **Generalidad excesiva**: no distingue entre medicamento experimental, genérico o de uso compasivo.  
+2. **Falta de referencias normativas**: omite regulaciones EMA (UE) o FDA (EE.UU.).  
+3. **Ausencia de evidencia científica**: no menciona ensayos clínicos ni fases de aprobación.  
+4. **Olvido de protocolos hospitalarios**: ignora comités de ética y guías de farmacovigilancia.  
+5. **Escasa aplicabilidad práctica**: un comité hospitalario no puede usar esta salida para tomar decisiones reales.  
+
+---
+
+## 🔎 Observaciones
+Este nivel produce un listado básico de riesgos, útil solo como mapa mental inicial.  
+👉 Nivel 2 debería incluir **rol (médico, farmacéutico)**, **contexto (hospital concreto, tipo de pacientes)** y **fuentes**.
