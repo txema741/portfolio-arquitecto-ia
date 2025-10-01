@@ -1,43 +1,42 @@
-# Nivel 3 — Analítico (LegalTech)
+# Nivel 3 — Analítico (FinTech)
 
 ## Rol
-Actúa como **consultor jurídico-financiero senior especializado en M&A en España y la UE**, con 10+ años de experiencia.
+Actúa como **consultor senior en regulación financiera y pagos digitales UE**, con foco en licencias cripto-fiat.
 
 ## Caso
-Fusión entre dos empresas de software en España (EV 150 M€).
+Startup española lanza **plataforma de pagos cripto-fiat en la UE (2025)**.
 
 ## Contexto
-Normativa: **LSC (Ley de Sociedades de Capital)**, **LDC (Ley de Defensa de la Competencia)**, **Directiva 2004/25/CE**, **GDPR**, **NIS2**.
+Normativa: **MiCA**, **PSD2**, **AMLD5/6**, **NIS2**, **GDPR**.
 
 ## Instrucciones
-1. Identifica **5 riesgos principales** con artículo legal/§ aplicable.  
-2. Estima impacto (€/%) sobre el EV y probabilidad (B/M/A).  
-3. Construye **3 escenarios prospectivos (optimista, realista, crítico)**.  
-4. Genera tabla Top-5 riesgos con columnas exactas.  
-5. Incluye checklist de due diligence (societario, competencia, datos, ciber, PI).  
-6. **Restricciones**: no inventar datos; si falta evidencia → “No disponible”.
+1. Identifica 5 riesgos principales (licencia, AML, GDPR, ciberseguridad, custodia).  
+2. Cuantifica impacto (€/%) en costes y retrasos.  
+3. Construye 3 escenarios (optimista, realista, crítico).  
+4. Tabla Top-5 riesgos.  
+5. Checklist: licencias, KYC/AML, SCA, ciberseguridad (NIS2), custodia cripto.  
+6. Restricciones: no inventar; citar normativa exacta.
 
 ## Formato esperado
 | # | Riesgo | Norma/Art. | Impacto | Prob. | Mitigación (3 bullets) | Confianza |
-|---|--------|------------|---------|-------|-------------------------|-----------|
 
 ### Supuestos y Sensibilidad
-- Tasa de descuento __%  
-- Sinergias netas __%  
-- Horizonte __ meses  
-- Valoración ±10% → ΔNPV [__, __]  
-- Retraso regulatorio +6/+12m → ΔNPV [__, __]  
-- Tipos +150 pb → ΔNPV [__, __]
+- Coste licencia inicial __M€  
+- Coste KYC/cliente __€  
+- Adopción anual __%  
+- Conversión ±20% → Δrunway [__, __]  
+- Coste cumplimiento +30% → ΔNPV [__, __]  
+- Retraso licencia +6/+12m → Δliquidez [__, __]
 
 ## Problemas del N3
-- Dependencia de supuestos internos.  
-- Sin benchmark internacional.  
-- No integra métricas ESG ni roadmap.
+- Subestima ciberataques avanzados.  
+- Supuestos de crecimiento poco realistas.  
+- Sin comparativa multi-jurisdicción.  
 
 ## Por qué N4 es mejor
-- Añade **comparativas internacionales**.  
-- Integra **PESTEL/DAFO/ESG/10DR**.  
-- Roadmap a 24–36m con KPIs estratégicos.
+- Añade benchmark internacional (UE/UK/USA).  
+- PESTEL y ESG.  
+- Roadmap 5 años con KPIs estratégicos (LTV/CAC, churn, resiliencia ciber).
 
 ## Observaciones
-N3 válido para comité de inversión; N4 lo escala a estrategia de Consejo.
+N3 es útil para VC y reguladores; N4 lo transforma en plan de escalado internacional.
