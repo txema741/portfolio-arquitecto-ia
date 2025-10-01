@@ -1,51 +1,51 @@
-# Nivel 1 — Descriptivo
+# Nivel 1 — Descriptivo (Legal-Tech)
 
-Este nivel muestra cómo funciona un prompt básico: directo, sin rol, sin escenario ni contexto.  
-Es el punto de partida para evidenciar las limitaciones y la necesidad de evolucionar hacia prompts más sólidos.
-
----
-
-## ⚖️ Caso Legal-Tech — Fusión Empresarial en España
-
-### 📝 Prompt
-Explica los riesgos legales de una fusión entre dos empresas en España.
-
-
-### 📤 Salida esperada. 
-- **Riesgos de competencia:** posibilidad de generar monopolios u oligopolios que infrinjan las normas de libre competencia.  
-- **Riesgos fiscales:** posibles cargas impositivas inesperadas relacionadas con la reestructuración y transmisión de activos.  
-- **Riesgos laborales:** conflictos derivados de la integración de plantillas, negociación colectiva o despidos.  
-- **Riesgos contractuales:** dificultades en la unificación de contratos vigentes con proveedores y clientes.  
-- **Riesgos de cumplimiento normativo:** necesidad de cumplir regulaciones sectoriales adicionales tras la fusión.  
+## 📖 Descripción
+En el ámbito **Legal-Tech**, la inteligencia artificial se utiliza para revisar contratos, asistir en due diligence, detectar riesgos normativos o generar borradores legales.  
+El objetivo de este nivel es mostrar cómo un **prompt básico y descriptivo** genera respuestas **superficiales y genéricas**, que no son suficientes para el trabajo jurídico profesional, pero sirven como punto de partida para evidenciar sus limitaciones.
 
 ---
 
-## ⚠️ Problemas del Nivel 1 (Legal-Tech)
+## 📝 Prompt
+Explica los riesgos legales más comunes en una fusión entre dos empresas de software en España.
+
+
+## 📤 Salida esperada (ejemplo de IA)
+- **Riesgos de competencia:** la operación podría dar lugar a prácticas monopolísticas o de abuso de posición dominante, generando sanciones por parte de la Comisión Nacional de los Mercados y la Competencia (CNMC).  
+- **Riesgos fiscales:** el proceso de integración puede generar cargas impositivas no previstas, especialmente relacionadas con la transmisión de activos intangibles (patentes, licencias de software).  
+- **Riesgos laborales:** conflictos por la unificación de plantillas, negociaciones colectivas complejas o litigios derivados de despidos improcedentes durante la reestructuración.  
+- **Riesgos contractuales:** problemas al integrar contratos de mantenimiento, licencias SaaS o acuerdos de confidencialidad, con riesgo de incumplimiento si no se renegocian adecuadamente.  
+- **Riesgos regulatorios:** la fusión puede requerir notificación previa a organismos de control, lo que retrasaría la operación si no se cumplen los plazos legales.  
+
+---
+
+## ⚠️ Problemas del Nivel 1
 1. **Generalidad excesiva**  
-   - Respuestas demasiado amplias, sin diferenciar sectores ni jurisdicciones.  
-   - Ejemplo: no distingue entre fusiones en banca, salud o retail.
+   - La respuesta identifica riesgos típicos, pero no hace referencia a artículos legales concretos (ej: Ley de Sociedades de Capital, Ley de Defensa de la Competencia).  
+   - No distingue entre fusiones de startups pequeñas y grandes multinacionales, que enfrentan marcos regulatorios muy diferentes.  
 
-2. **Falta de precisión legal**  
-   - No cita artículos concretos de leyes (ej: Ley de Sociedades de Capital, Ley de Defensa de la Competencia).  
-   - Hace que la salida no sea aplicable en entornos profesionales.
+2. **Falta de normativas específicas**  
+   - No cita regulaciones europeas relevantes (Directiva de Fusiones de la UE).  
+   - Ignora posibles implicaciones sectoriales (ciberseguridad, protección de datos en software).  
 
-3. **Ausencia de contexto**  
-   - No considera la magnitud de la operación (pymes vs multinacionales).  
-   - Ignora marcos regulatorios europeos (ej: normativa de fusiones de la UE).
+3. **Ausencia de contexto económico y social**  
+   - No considera el impacto de la fusión en el empleo local, ni la relación con stakeholders (clientes, proveedores estratégicos).  
+   - Tampoco aborda las implicaciones de la integración tecnológica (compatibilidad de infraestructuras, licencias cruzadas).  
 
-4. **No valida fuentes**  
-   - Se limita a dar conocimiento promedio.  
-   - No indica de dónde extrae la información ni referencia documentos oficiales.
+4. **Riesgo de alucinación futura**  
+   - En prompts más específicos, un modelo en Nivel 1 puede inventar normativas o instituciones inexistentes.  
+   - Ejemplo: citar una “Ley de Fusiones Comerciales de 2019 en España”, que no existe.  
 
-5. **Riesgo de alucinación futura**  
-   - En prompts más específicos puede inventar normas inexistentes.  
-   - Ejemplo: citar “Ley de Fusiones Comerciales de 2019” (que no existe en España).
-
-6. **No útil para toma de decisiones**  
-   - Un consultor o abogado no podría usar la salida en un informe real.  
-   - Solo sirve como brainstorming inicial con ideas vagas.
+5. **Limitada utilidad práctica**  
+   - Para un bufete de abogados o un consejo de administración, esta salida sería insuficiente.  
+   - Carece de valor accionable porque no incorpora jurisprudencia, precedentes ni cronogramas de cumplimiento.  
 
 ---
 
+## 🔎 Observaciones
+El **Nivel 1 — Descriptivo** cumple la función de un esquema inicial de brainstorming, pero:  
+- Es demasiado genérico y superficial.  
+- No aporta confianza para informes profesionales.  
+- No distingue entre sectores, tamaño de empresas ni contexto internacional.  
 
-
+👉 El siguiente paso será el **Nivel 2 — Contextualizado**, donde se añade **rol, escenario y contexto concreto** para obtener un análisis más aplicable.
