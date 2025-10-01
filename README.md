@@ -3,7 +3,7 @@
 
 Itinerario intensivo de **3 meses (4–5h/día)** para pasar de **usuario** a **arquitecto de soluciones de IA**.  
 
-Este repositorio documenta paso a paso el proceso: desde el prompting quirúrgico hasta la automatización con ROI y la construcción de arquitecturas IA escalables, terminando en un **portfolio profesional** listo para entrevistas y clientes.
+Este repositorio documenta paso a paso el proceso: desde el prompting quirúrgico hasta la automatización con ROI y la construcción de arquitecturas IA escalables, terminando en un **portfolio profesional** listo para clientes.
 
 ---
 
