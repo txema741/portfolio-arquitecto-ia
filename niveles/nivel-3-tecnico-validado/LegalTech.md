@@ -1,48 +1,49 @@
 # Nivel 3 — Analítico (LegalTech)
 
 ## 📖 Descripción
-El **Nivel 3** supera el N2 incorporando **jurisprudencia y precedentes**, **métricas cuantitativas** (impacto en €/%), **escenarios prospectivos** y **recomendaciones con nivel de confianza**.
+En LegalTech aplicado a M&A, el N3 añade **jurisprudencia y normativa**, **métricas cuantitativas** (impacto en EV y plazos), y **escenarios prospectivos**.  
+Se abordan riesgos legales, regulatorios y tecnológicos (incluyendo **ciberseguridad en integración TI**) con estimaciones financieras.
 
-> Siglas: M&A (*Mergers & Acquisitions – Fusiones y Adquisiciones*), LSC (*Ley de Sociedades de Capital*), LDC (*Ley de Defensa de la Competencia*), GDPR (*General Data Protection Regulation – Reglamento General de Protección de Datos*), CNMC (*Comisión Nacional de los Mercados y la Competencia*), DPIA (*Data Protection Impact Assessment – Evaluación de Impacto de Protección de Datos*), CLM (*Contract Lifecycle Management – Gestión del Ciclo de Vida de Contratos*), RACI (*Responsible, Accountable, Consulted, Informed – Responsable, Aprobador, Consultado, Informado*).
+## 📝 Prompt
+Actúa como **consultor jurídico-financiero senior especializado en M&A** en jurisdicción española y europea.  
+**Escenario:** fusión de dos empresas de software en España, valorada en **150 M€**.  
+**Normativa:** LSC, LDC, Directiva de Fusiones UE 2004/25/CE, GDPR, NIS2.
 
-## 📝 Prompt — Nivel 3 (Analítico, profesional y ampliado)
-Actúa como **consultor jurídico-financiero senior** en **M&A** con experiencia en **jurisprudencia española y europea**.  
-**Escenario:** fusión de dos compañías de software con sede en España, **EV 150 M€**.  
-**Contexto normativo:** **LSC**, **LDC**, **Directiva 2004/25/CE**, **GDPR**.
+**Instrucciones:**
+1. Identifica **5 riesgos principales** con Art./§ y normativa aplicable.  
+2. Estima **impacto (€/%)** sobre el valor de la operación y probabilidad (B/M/A).  
+3. Construye **3 escenarios (optimista, realista, crítico)** con efecto en NPV.  
+4. Incluye **RACI** y **mapa riesgo×impacto**.  
+5. Checklist: gobierno societario, competencia, datos personales, PI, ciberseguridad integración.
 
-**Instrucciones (salida requerida):**
-1. **Top-5 riesgos** con **artículos/§** citados, **impacto (€/%)**, **probabilidad** (B/M/A), **mitigación**, **precedentes** y **confianza** (Alta/Media/Baja).  
-2. **Cuantificación**: costes de transacción, cumplimiento (remedios), y **sensibilidades** (±10 % valoración; +12 m retraso; +150 pb tipos).  
-3. **Escenarios (24–36 m)**: Optimista/Intermedio/Crítico con hipótesis y efecto en **NPV (Net Present Value – Valor Actual Neto)**.  
-4. **Mapa de calor** riesgo×impacto y **plan RACI** para mitigaciones.  
-5. **Checklist de due diligence** (contratos, IP, datos/GDPR, laboral, competencia) con **nivel de confianza**.
+## 📤 Ejemplo de salida esperada (tabla Top-5 Riesgos)
+| # | Riesgo | Norma/Art. | Impacto estimado | Prob. | Mitigación (3 bullets) | Confianza |
+|---|--------|------------|------------------|-------|-------------------------|-----------|
+| 1 | Riesgo de competencia / abuso de posición | LDC Art. 2, 8, 10 | Multa hasta 10 % ingresos; retraso ≥12m | Media | • Pre-filing CNMC • Definición mercado relevante • Plan desinversión parcial | 4/5 |
+| 2 | Riesgos societarios (nulidad acuerdos) | LSC Art. 160(f), 511 | Nulidad operación → 100 % EV comprometido | Baja-Media | • Mayorías reforzadas • Informe activo esencial • Protocolos de junta | 4/5 |
+| 3 | Protección de datos personales | GDPR Arts. 6, 32, 35 | Multa hasta 4 % facturación global | Media | • DPIA • Cifrado • Minimización y *clean team* | 5/5 |
+| 4 | Ciberseguridad en integración TI | NIS2 Arts. 21–23 | Paro operaciones; pérdida 5–10 % sinergias | Media-Alta | • SOC conjunto • Plan respuesta incidentes • Monitorización post-fusión | 4/5 |
+| 5 | Propiedad intelectual (licencias software) | TRLPI, Directiva 2009/24/CE | Riesgo pérdida activos clave | Media | • Auditoría PI • Revisión contratos • Acuerdos de transferencia | 3/5 |
 
-## 📤 Estructura de salida (resumen)
-- **Resumen ejecutivo** (≤180 palabras).  
-- **Tabla Top-5 riesgos** (Riesgo | Base legal | Prob. | Impacto | Mitigación | Precedente | Confianza).  
-- **Cuantificación y sensibilidades**.  
-- **Escenarios** con NPV y *triggers*.  
-- **Heatmap + RACI**.  
-- **Checklists** por dominio.
-
-## 🔧 Supuestos y Sensibilidad (rellenar)
+## 🔧 Supuestos y Sensibilidad
 Supuestos clave: tasa de descuento __%; sinergias netas __%; horizonte __ meses.  
 Sensibilidad:  
-- **Valoración ±10% → ΔNPV: [__, __]**  
-- **Retraso regulatorio +6/+12 meses → ΔNPV: [__, __]**  
-- **Tipos +150 pb → ΔNPV: [__, __]**
+- **Valoración ±10% → ΔNPV [__, __]**  
+- **Retraso regulatorio +6/+12m → ΔNPV [__, __]**  
+- **Tipos +150 pb → ΔNPV [__, __]**
 
----
+## ⚠️ Problemas del N3
+- Depende de **supuestos financieros** internos.  
+- Sin visión comparativa internacional.  
+- No contempla métricas de sostenibilidad (ESG).  
+- Riesgos tecnológicos solo parcialmente cubiertos.
 
-## ⚠️ Problemas del Nivel 3
-- **Dependencia de supuestos**: el NPV y los impactos varían con hipótesis internas.  
-- **Cobertura regulatoria incompleta**: no compara sistemáticamente regiones/mercados.  
-- **Ejecución no gobernada**: sin **roadmap**, **OKR** ni **RACI** vinculantes.  
-- **No es “vivo”**: no monitoriza KPIs ni lanza alertas operativas.
-
-## 🆙 Por qué **N4** es mejor que **N3**
-- Añade **benchmark internacional**, **PESTEL/DAFO/ESG/10DR**, **KPIs/OKR** y **roadmap 24–36 m**.  
-- Define **opciones estratégicas (plays)** con **gates** de decisión y **caso de inversión** (NPV/IRR + sensibilidades).
+## 🆙 Por qué N4 > N3
+- Añade **benchmark internacional** (UE/EE.UU./LatAm).  
+- Integra **PESTEL, DAFO, ESG y 10DR**.  
+- Define **KPIs estratégicos** y **roadmap 24–36m** con *gates* de decisión.
 
 ## 🔎 Observaciones
-N3 es óptimo para **comité de inversión**; si la decisión preliminar es positiva, pasar a **N4** para **planificar** y **comparar** rutas de ejecución.
+N3 es adecuado para **comité de inversión**: identifica riesgos cuantificados y plazos críticos.  
+N4 convierte estos hallazgos en una **estrategia internacional y sostenible**.
+
