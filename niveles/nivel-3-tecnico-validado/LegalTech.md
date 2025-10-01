@@ -46,4 +46,7 @@ Normativa: **LSC (Ley de Sociedades de Capital)**, **LDC (Ley de Defensa de la C
 - Roadmap 24–36m con KPIs estratégicos.
 
 ## Observaciones
-N3 es válido para comité de inversión; N4 escala el análisis a Consejo.
+Este nivel proporciona una **visión práctica y accionable** de la operación de M&A, suficiente para un **comité de inversión** que debe evaluar la viabilidad inmediata de la fusión.  
+La tabla de riesgos facilita una lectura rápida, pero aún carece de **contexto internacional, análisis ESG y planes de contingencia estratégicos**.  
+Además, aunque introduce ciberseguridad y datos personales, no entra en métricas de gobernanza ni jurisprudencia comparada.  
+En definitiva, el N3 es **un informe sólido de validación técnica**, pero no una estrategia a largo plazo: funciona como **puente hacia N4**, que añadirá visión comparativa, escenarios de negocio y métricas estratégicas.
