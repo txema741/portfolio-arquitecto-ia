@@ -1,4 +1,4 @@
-# Nivel 3 — Analítico (LegalTech)
+# Nivel 3 — Técnico Validado (LegalTech)
 
 ## Rol
 Actúa como **consultor jurídico-financiero senior especializado en M&A en España y la UE**, con 10+ años de experiencia.
@@ -15,13 +15,18 @@ Normativa: **LSC (Ley de Sociedades de Capital)**, **LDC (Ley de Defensa de la C
 3. Construye **3 escenarios prospectivos (optimista, realista, crítico)**.  
 4. Genera tabla Top-5 riesgos con columnas exactas.  
 5. Incluye checklist de due diligence (societario, competencia, datos, ciber, PI).  
-6. **Restricciones**: no inventar datos; si falta evidencia → “No disponible”.
+6. Restricciones: no inventar datos; si falta evidencia → “No disponible”.
 
-## Formato esperado
+## Tabla Top-5 Riesgos
 | # | Riesgo | Norma/Art. | Impacto | Prob. | Mitigación (3 bullets) | Confianza |
 |---|--------|------------|---------|-------|-------------------------|-----------|
+| 1 | Competencia / abuso de posición | LDC Art. 2, 8, 10 | Multa hasta 10 % ingresos; retraso ≥12m | Media | • Pre-filing CNMC • Plan desinversión • Definición mercado relevante | 4/5 |
+| 2 | Riesgo societario (nulidad) | LSC Art. 160(f), 511 | Nulidad operación → 100 % EV comprometido | Baja-Media | • Mayorías reforzadas • Informe activo esencial • Protocolos junta | 4/5 |
+| 3 | Protección de datos | GDPR Arts. 6, 32, 35 | Multa hasta 4 % turnover global | Media | • DPIA • Cifrado • Minimización y *clean team* | 5/5 |
+| 4 | Ciberseguridad integración TI | NIS2 Arts. 21–23 | Paro operaciones; pérdida 5–10 % sinergias | Media-Alta | • SOC conjunto • Respuesta incidentes • Monitorización post-fusión | 4/5 |
+| 5 | Propiedad intelectual | TRLPI, Dir. 2009/24/CE | Pérdida activos clave | Media | • Auditoría PI • Revisión contratos • Transferencias pactadas | 3/5 |
 
-### Supuestos y Sensibilidad
+## Supuestos y Sensibilidad
 - Tasa de descuento __%  
 - Sinergias netas __%  
 - Horizonte __ meses  
@@ -29,16 +34,16 @@ Normativa: **LSC (Ley de Sociedades de Capital)**, **LDC (Ley de Defensa de la C
 - Retraso regulatorio +6/+12m → ΔNPV [__, __]  
 - Tipos +150 pb → ΔNPV [__, __]
 
-## Problemas del N3
+## Problemas del Nivel 3
 - Dependencia de supuestos internos.  
-- Sin benchmark internacional.  
-- No integra métricas ESG ni roadmap.
+- Falta benchmark internacional.  
+- ESG no incorporado.  
+- Riesgos tecnológicos limitados.
 
 ## Por qué N4 es mejor
-- Añade **comparativas internacionales**.  
-- Integra **PESTEL/DAFO/ESG/10DR**.  
-- Roadmap a 24–36m con KPIs estratégicos.
+- Añade jurisprudencia y comparativa internacional.  
+- Integra PESTEL/DAFO/ESG.  
+- Roadmap 24–36m con KPIs estratégicos.
 
 ## Observaciones
-N3 válido para comité de inversión; N4 lo escala a estrategia de Consejo.
-
+N3 es válido para comité de inversión; N4 escala el análisis a Consejo.
