@@ -45,4 +45,8 @@ Normativa: **MiCA**, **PSD2**, **AMLD5/6**, **NIS2**, **GDPR**.
 - Roadmap 5 años con KPIs estratégicos.
 
 ## Observaciones
-N3 es útil para VC y reguladores; N4 lo convierte en plan internacional.
+El N3 en FinTech ofrece una **visión cuantificada del riesgo regulatorio y operativo**, útil para **inversores de capital riesgo y auditores**.  
+Su valor está en traducir las exigencias normativas (MiCA, AMLD, NIS2) en métricas financieras y plazos concretos.  
+Sin embargo, sigue siendo un análisis centrado en la **supervivencia inicial de la startup** y no en su expansión sostenible.  
+No contempla escenarios de escalado multijurisdiccional ni resiliencia reputacional, que son claves en este sector.  
+Por eso, este nivel funciona como una **validación técnica de cumplimiento mínimo**, pero será en N4 donde se construya el **plan de crecimiento internacional con métricas de largo plazo**.
