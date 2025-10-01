@@ -1,4 +1,4 @@
-# Nivel 3 — Analítico (FinTech)
+# Nivel 3 — Técnico-validado (FinTech)
 
 ## Rol
 Actúa como **consultor senior en regulación financiera y pagos digitales UE**, con foco en licencias cripto-fiat.
