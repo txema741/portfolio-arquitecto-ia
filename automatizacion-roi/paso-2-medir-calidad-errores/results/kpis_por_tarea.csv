@@ -1,0 +1,6 @@
+tarea,minutos_antes,minutos_despues,volumen_mensual,ahorro_minutos,ahorro_%,coste_base,coste_ia_total,beneficio,ROI_%
+Redacción de informe mensual,45,20,10,25,0.56,187.50,91.67,95.83,104.5
+Limpieza de datos,30,12,20,18,0.60,250.00,120.00,130.00,108.3
+Preparación de presentación,60,40,6,20,0.33,150.00,100.00,50.00,50.0
+Revisión de contratos,35,28,15,7,0.20,218.75,175.00,43.75,25.0
+TOTAL,,,,70,0.42,806.25,486.67,319.58,65.7
