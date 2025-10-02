@@ -19,22 +19,6 @@ En otras palabras:
 
 ---
 
-## 📦 Estructura del paso
-```plaintext
-paso-1-medir-ahorro-tiempo/
-├── README.md                # Esta explicación
-├── requirements.txt         # Dependencias (pandas, numpy, pytest)
-├── data_sample/
-│   └── tareas_antes_despues.csv   # Dataset de ejemplo
-├── scripts/
-│   └── compute_roi.py       # Script de cálculo
-├── results/
-│   └── (kpis_por_tarea.csv, resumen_roi.md)
-└── tests/
-    └── test_compute_roi.py  # Prueba automática (opcional)
-
-
-
 📥 Datos de entrada: ¿qué información necesitamos?
 
 El dataset de entrada (tareas_antes_despues.csv) contiene una lista de tareas repetitivas con 3 datos básicos:
@@ -51,4 +35,5 @@ Redacción de informe mensual,45,20,10
 Limpieza de datos,30,12,20
 Preparación de presentación,60,40,6
 Revisión de contratos,35,28,15
+
 
