@@ -1,0 +1,5 @@
+tipo_error,frec_mensual,tiempo_correccion_min,coste_hora,impacto_reputacional
+Duplicados en base de clientes,25,10,25,50
+Errores en direcciones de envío,15,12,25,30
+Datos incompletos en contratos,8,20,30,80
+Errores en facturación,5,25,40,100
