@@ -13,7 +13,9 @@ Implementar el **módulo de ejecución automatizada** que toma los resultados de
 ---
 
 ## ⚙️ Scripts y Estructura  
+
 automatizacion-roi/
+
 ├── step_4_reporting/
 │   ├── generate_reports.py       # Genera informes (MD, CSV, PDF opcional)
 │   ├── export_utils.py           # Funciones auxiliares para exportación
