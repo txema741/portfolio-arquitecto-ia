@@ -14,30 +14,27 @@ Implementar el **módulo de ejecución automatizada** que toma los resultados de
 
 ## ⚙️ Scripts y Estructura  
 
-automatizacion-roi/
-
-├── step_4_reporting/
-
-│   ├── generate_reports.py       # Genera informes (MD, CSV, PDF opcional)
-
-│   ├── export_utils.py           # Funciones auxiliares para exportación
-
-│   ├── __init__.py
-
-│
-├── tests/
-
-│   ├── test_generate_reports.py  # Pruebas unitarias Pytest
-
-│   ├── test_export_utils.py
-│
-├── results/
-
-│   ├── final_report.md           # Informe consolidado
-
-│   ├── final_report.csv          # Resumen en tabla CSV
-
-│   └── final_report.pdf          # (opcional si se activa flag --pdf)
+automatizacionRoi/
+└── paso-4-dashboards-kpi/
+    ├── README.md
+    ├── requirements.txt
+    │
+    ├── scripts/
+    │   ├── generate_reports.py     # Genera informes en CSV, MD y PDF
+    │   ├── dashboard.py            # Dashboard interactivo (Streamlit/Plotly)
+    │   ├── charts.py               # Funciones auxiliares de gráficos
+    │   └── __init__.py
+    │
+    ├── results/
+    │   ├── final_report.csv        # Consolidado ROI + CoPQ
+    │   ├── final_report.md         # Informe en Markdown
+    │   ├── final_report.pdf        # Informe en PDF
+    │   └── kpi_dashboard.html      # Dashboard exportado como HTML
+    │
+    └── tests/
+        ├── test_generate_reports.py
+        ├── test_dashboard.py
+        └── test_charts.py
 
 
 ---
