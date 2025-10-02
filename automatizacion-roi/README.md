@@ -1,15 +1,22 @@
-# ⚙️ Fase 2 — Automatización + ROI
+# Automatización + ROI Empresarial
 
-En esta fase se desarrollan scripts y sistemas para medir el impacto real de la IA en términos de **tiempo, coste y eficiencia**.
+## Objetivo
+Medir y demostrar **ROI (Return on Investment – Retorno de la Inversión)** de casos IA con scripts reproducibles, datasets sintéticos y pruebas.
 
-## 📂 Estructura interna
-- **scripts/** → Scripts Python para:
-  - Cálculo de ROI.
-  - Automatización de tareas repetitivas.
-  - Casos de uso en Legal-Tech, Health-Tech y FinTech.
+## Estructura
+- `/scripts/` → `calc_roi.py`, `simulate_costs.py`, `tests/`
+- `/data_sample/` → CSV/XLSX sintéticos
+- `/results/` → reportes MD/PDF, gráficos
+- `/docs/` → metodología, supuestos
 
-## 🔹 Objetivo de esta fase
-1. Cuantificar el ahorro de tiempo y dinero con IA.
-2. Construir dashboards con KPIs de negocio.
-3. Validar el impacto de la automatización con métricas objetivas.
+## Fórmulas base
+ROI = (Beneficio − Coste) / Coste  
+Payback (meses), NPV, *sensitivity ±20%*
 
+## KPI
+- **KPI**: ahorro horas/mes, reducción errores, *latency* p95, adopción.
+
+## Cómo ejecutar
+```bash
+python scripts/calc_roi.py --input data_sample/caso.csv --outdir results --pdf
+pytest -q
