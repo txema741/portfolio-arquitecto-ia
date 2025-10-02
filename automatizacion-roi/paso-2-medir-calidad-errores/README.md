@@ -1,121 +1,82 @@
-# Paso 2 — Medir Calidad y Errores → CoPQ (*Cost of Poor Quality – Coste de Mala Calidad*)
+# Paso 2 — Medir Calidad y Errores → CoPQ (*Cost of Poor Quality – Coste de la Mala Calidad*)
 
-Este paso mide el impacto de los **errores y la calidad de los datos o procesos** en términos económicos. A partir de métricas de calidad, se calcula el **CoPQ** y su traducción a pérdidas evitables.
+Este paso cuantifica el **impacto económico de los errores** en procesos o datasets.  
+El objetivo es mostrar cómo la IA reduce los **costes ocultos** por correcciones, reprocesos o incumplimientos.
 
 ---
 
 ## 📦 Estructura del paso
 ```plaintext
 paso-2-medir-calidad-errores/
-├── README.md                      # Este archivo
-├── requirements.txt               # Dependencias (pandas, numpy)
+├── README.md
+├── requirements.txt
 ├── data_sample/
-│   └── errores_registro.csv       # Datos de ejemplo
+│   └── errores_dataset.csv
 ├── scripts/
-│   └── compute_copq.py            # Script de cálculo
+│   └── compute_copq.py
 ├── results/
-│   └── (copq_por_dimension.csv, resumen_copq.md)
+│   └── (copq_por_error.csv, resumen_copq.md)
 └── tests/
-    └── test_compute_copq.py       # Tests mínimos (opcional)
+    └── test_compute_copq.py
 
-📥 Datos de entrada
+📥 Datos de entrada (CSV de ejemplo)
 
-Archivo CSV de ejemplo (data_sample/errores_registro.csv):
-dimension,total_registros,errores,impacto_unitario
-Clientes,1000,50,20
-Pedidos,500,25,15
-Facturas,200,10,50
+Guarda este archivo como data_sample/errores_dataset.csv:
 
-Esquema requerido:
+tipo_error,frec_mensual,tiempo_correccion_min,coste_hora,impacto_reputacional
+Duplicados en base de clientes,25,10,25,50
+Errores en direcciones de envío,15,12,25,30
+Datos incompletos en contratos,8,20,30,80
+Errores en facturación,5,25,40,100
 
-dimension → área analizada (clientes, pedidos, facturas, etc.)
+🧮 Fórmulas
 
-total_registros → número de registros evaluados
+coste_correccion = (tiempo_correccion_min / 60) × coste_hora × frec_mensual
 
-errores → número de errores detectados
+coste_reputacional = impacto_reputacional × frec_mensual
 
-impacto_unitario → coste medio asociado a cada error (€)
+coste_total = coste_correccion + coste_reputacional
 
-🧮 Parámetros y fórmulas
+CoPQ_total = Σ coste_total
 
-Parámetros CLI del script compute_copq.py:
+▶️ Cómo ejecutar
 
---input → ruta al CSV (ej: data_sample/errores_registro.csv)
+Instalar dependencias:
 
---outdir → carpeta de salida (ej: results)
-
---currency → moneda (defecto: EUR)
-
-Fórmulas por dimensión:
-
-error_rate = errores / total_registros
-
-coste_errores = errores × impacto_unitario
-
-copq_pct = (coste_errores / (total_registros × impacto_unitario)) × 100
-
-Fórmulas globales:
-
-errores_totales = Σ errores
-
-coste_total_errores = Σ coste_errores
-
-error_rate_global = errores_totales / Σ total_registros
-
-# Instalar dependencias
 pip install -r paso-2-medir-calidad-errores/requirements.txt
 
-# Ejecutar cálculo
+
+Ejecutar:
+
 python paso-2-medir-calidad-errores/scripts/compute_copq.py \
-  --input paso-2-medir-calidad-errores/data_sample/errores_registro.csv \
-  --outdir paso-2-medir-calidad-errores/results \
-  --currency EUR
-
-Salidas en results/:
-
-copq_por_dimension.csv → métricas de CoPQ por cada dimensión
-
-resumen_copq.md → resumen ejecutivo con:
-
-Tasa de errores por dimensión y global
-
-Coste económico estimado de la mala calidad
-
-% de pérdida sobre el total
+  --input paso-2-medir-calidad-errores/data_sample/errores_dataset.csv \
+  --outdir paso-2-medir-calidad-errores/results
 
 📊 KPIs sugeridos
 
-Tasa de error por dimensión = errores / total_registros
+Coste total de corrección mensual (CoPQ).
 
-Errores totales detectados
+% de cada error sobre el total.
 
-Coste económico de los errores (€)
+Ranking Top 3 errores por coste.
 
-CoPQ % sobre volumen total
-
-Reducción de errores tras IA (comparativa antes/después)
+Horas perdidas al mes.
 
 ✅ Control de calidad
 
-Validar que errores ≤ total_registros
+Columnas numéricas (frec_mensual, tiempo_correccion_min, coste_hora, impacto_reputacional) deben ser > 0.
 
-Revisar que impacto_unitario ≥ 0
-
-Evitar valores vacíos o no numéricos
-
-Comprobar que la suma global de errores coincide con el detalle por dimensión
-
-Hacer pruebas de sensibilidad variando impacto_unitario ±20%
+Revisar que el CoPQ_total no esté dominado por un único error (outlier).
 
 🛠️ Solución de problemas
 
-“No such file or directory” → revisar ruta en --input
+NaN en resultados → revisar CSV, hay celdas vacías.
 
-Valores negativos → revisar columnas errores e impacto_unitario
+Errores negativos → revisar que los costes y tiempos sean positivos.
 
-Tasas de error >100% → revisar que errores ≤ total_registros
+Resultados irreales → validar si el impacto_reputacional es demasiado alto.
 
-Resultados nulos → puede que errores = 0; en ese caso, el CoPQ es 0%
-
-Costes incoherentes → validar impacto_unitario con negocio (ej: coste por retrabajo, penalizaciones, reclamaciones)
-
+📄 requirements.txt
+pandas>=2.0.0
+numpy>=1.24.0
+pytest>=7.4.0
