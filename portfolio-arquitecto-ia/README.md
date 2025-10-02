@@ -4,7 +4,7 @@ Este directorio reúne los **proyectos finales** desarrollados durante la ruta, 
 
 ## 📂 Estructura interna
 - **proyectos/** → MVPs listos con demos y documentación.
-- **cv-especializado.md** → CV orientado a IA + consultoría.
+- **cv-especializado.md** → CV orientado a IA + consultoría. 
 - **pitch-elevator.md** → Presentación breve de valor personal.
 - **lista-empresas-objetivo.md** → Target de empresas/industrias.
 - **template-propuesta-valor.md** → Plantilla para propuestas de consultoría.
