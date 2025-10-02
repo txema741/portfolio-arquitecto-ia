@@ -12,24 +12,6 @@ Implementar el **módulo de ejecución automatizada** que toma los resultados de
 
 ---
 
-## ⚙️ Scripts y Estructura  
-automatizacion-roi/
-├── step_4_reporting/
-│   ├── generate_reports.py       # Genera informes (MD, CSV, PDF opcional)
-│   ├── export_utils.py           # Funciones auxiliares para exportación
-│   ├── __init__.py
-│
-├── tests/
-│   ├── test_generate_reports.py  # Pruebas unitarias Pytest
-│   ├── test_export_utils.py
-│
-├── results/
-│   ├── final_report.md           # Informe consolidado
-│   ├── final_report.csv          # Resumen en tabla CSV
-│   └── final_report.pdf          # (opcional si se activa flag --pdf)
-
----
-
 ## 🖥️ Ejecución CLI  
 python step_4_reporting/generate_reports.py \
   --input results/roi_kpis.csv \
@@ -97,3 +79,5 @@ La inversión es **viable** bajo los escenarios actuales.
 ## 🎯 Conclusión del Paso 4  
 Ya tenemos el módulo de reporting que consolida todos los resultados anteriores y los convierte en entregables listos para cliente/portafolio.  
 El flujo ahora queda cerrado: entrada → limpieza → cálculo → informes.  
+
+
