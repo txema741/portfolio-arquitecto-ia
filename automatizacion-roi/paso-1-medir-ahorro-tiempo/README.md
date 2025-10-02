@@ -134,4 +134,5 @@ Beneficio negativo con ahorro positivo → la licencia/operación IA supera el a
 
 Resultados demasiado buenos → validar con cronometraje (time & motion), logs o muestreo manual
 
-icencia: MIT — Usa datos anónimos/sintéticos en data_sample/ y evita subir información sensible.
+Licencia: MIT — Usa datos anónimos/sintéticos en data_sample/ y evita subir información sensible.
+
