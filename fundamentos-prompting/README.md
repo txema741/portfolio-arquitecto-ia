@@ -1,4 +1,4 @@
-# 🧱 Fase 1 — Fundamentos de Prompting
+# 🧱Fundamentos de Prompting
 
 Esta fase documenta cómo evolucionar desde prompts simples hasta prompts arquitectónicos maestros, aplicados en distintos sectores (Legal, Health, FinTech, Marketing, EduTech).
 
