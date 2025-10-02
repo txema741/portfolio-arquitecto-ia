@@ -1,15 +1,23 @@
-# 🏗️ Fase 3 — Arquitectura Escalable
 
-Aquí se diseñan **MVPs (Minimum Viable Products)** y patrones arquitectónicos para llevar la IA de un experimento a un producto estable.
+---
 
-## 📂 Estructura interna
-- **mvp/** → Prototipos de sistemas IA sectoriales:
-  - DueDiligenceAI (Legal-Tech).
-  - MedCheckAI (Health-Tech).
-  - RiskPredictAI (FinTech).
+# `arquitectura-escalable/README.md` – **Operativo (Mes 3)**
 
-## 🔹 Objetivo de esta fase
-1. Implementar patrones arquitectónicos por escala (startup, pyme, enterprise).
-2. Integrar validación, auditoría y compliance en soluciones IA.
-3. Documentar arquitecturas listas para ser presentadas a clientes o inversores.
+```md
+# Arquitectura Escalable – Startup / PYME / Enterprise
 
+## Objetivo
+Diseñar arquitecturas por escala con costos nube, **UML (Unified Modeling Language – Lenguaje Unificado de Modelado)** y *guardrails*.
+
+## Capas
+- Ingesta/ETL, *feature store*, **RAG (… – …)**, *serving*, observabilidad.
+- Seguridad/Compliance (GDPR, **RBAC (Role-Based Access Control – Control de Acceso Basado en Roles)**).
+
+## Artefactos
+- Diagramas (texto + imágenes), *IaC* mínima, *SLA* internos, SLO/SLA.
+
+## Pruebas de estrés
+- 1 000 docs / dataset grande; p95 lat < 1.5 s; costos por ambiente.
+
+## Entregables
+- `diagramas/`, `costos/`, `políticas/`, `runbooks/`
