@@ -1,26 +1,49 @@
-# Paso 1 — Medir Ahorro de Tiempo → ROI (*Return on Investment – Retorno de la Inversión*) mínimo viable
+# 📘 Paso 1 — Medir Ahorro de Tiempo → ROI (*Return on Investment – Retorno de la Inversión*)
 
-Este paso convierte minutos ahorrados por tarea en **ROI** y **KPIs (*Key Performance Indicators – Indicadores Clave de Desempeño*)** auditables. Es el **MVP (*Minimum Viable Product – Producto Mínimo Viable*)** para demostrar impacto económico antes de escalar.
+Este primer paso busca **demostrar con datos** si la Inteligencia Artificial realmente está generando beneficios.  
+Lo hacemos de la forma más sencilla y universal: **medir cuánto tiempo ahorramos en tareas repetitivas** y traducir ese ahorro en **dinero**.
+
+En otras palabras:
+1. Antes de usar IA, una tarea nos lleva **X minutos**.  
+2. Después de usar IA, la misma tarea nos lleva **menos tiempo**.  
+3. Si sabemos cuántas veces al mes hacemos esa tarea y cuánto cuesta la hora de trabajo → podemos calcular **el dinero ahorrado**.  
+4. Con ese dato, calculamos el **ROI (Retorno de la Inversión)** y tenemos un informe económico claro para tomar decisiones.
+
+---
+
+## 🎯 ¿Por qué este paso es importante?
+- Es un **mínimo producto viable (MVP)**: rápido, sencillo y entendible por cualquiera.  
+- Permite **justificar ante dirección** que la IA no es “magia”, sino ahorro medible.  
+- Genera un **primer informe auditable**, con números fáciles de comprobar.  
+- Crea confianza para pasar a pasos más avanzados (calidad, automatización, dashboards).  
 
 ---
 
 ## 📦 Estructura del paso
 ```plaintext
 paso-1-medir-ahorro-tiempo/
-├── README.md                      # Este archivo
-├── requirements.txt               # Dependencias (pandas, numpy)
+├── README.md                # Esta explicación
+├── requirements.txt         # Dependencias (pandas, numpy, pytest)
 ├── data_sample/
-│   └── tareas_antes_despues.csv   # Datos de ejemplo
+│   └── tareas_antes_despues.csv   # Dataset de ejemplo
 ├── scripts/
-│   └── compute_roi.py             # Script de cálculo
+│   └── compute_roi.py       # Script de cálculo
 ├── results/
 │   └── (kpis_por_tarea.csv, resumen_roi.md)
 └── tests/
-    └── test_compute_roi.py        # Tests mínimos (opcional)
+    └── test_compute_roi.py  # Prueba automática (opcional)
 
-📥 Datos de entrada
+📥 Datos de entrada: ¿qué información necesitamos?
 
-Archivo CSV de ejemplo (data_sample/tareas_antes_despues.csv):
+El dataset de entrada (tareas_antes_despues.csv) contiene una lista de tareas repetitivas con 3 datos básicos:
+
+minutos_antes → cuánto tardaba la tarea antes de usar IA.
+
+minutos_despues → cuánto tarda con IA.
+
+volumen_mensual → cuántas veces al mes repetimos la tarea.
+
+Ejemplo:
 
 tarea,minutos_antes,minutos_despues,volumen_mensual
 Redacción de informe mensual,45,20,10
@@ -28,111 +51,90 @@ Limpieza de datos,30,12,20
 Preparación de presentación,60,40,6
 Revisión de contratos,35,28,15
 
+🧮 Fórmulas explicadas de forma simple
 
-Esquema requerido:
+Imagina que eres el responsable de operaciones y quieres cuantificar el ahorro.
+Para cada tarea calculamos:
 
-tarea → nombre de la actividad
+Minutos ahorrados = minutos_antes − minutos_despues
 
-minutos_antes → duración promedio antes de IA
+% de ahorro = (minutos ahorrados ÷ minutos_antes) × 100
 
-minutos_despues → duración promedio después de IA
+Coste original = tiempo antes × coste hora × volumen mensual
 
-volumen_mensual → frecuencia de la tarea al mes
+Coste con IA = tiempo después × coste hora × volumen mensual + coste proporcional de la licencia IA
 
-🧮 Parámetros y fórmulas
+Beneficio = coste original − coste con IA
 
-Parámetros CLI del script compute_roi.py:
+ROI (%) = (beneficio ÷ coste con IA) × 100
 
---input → ruta al CSV (ej: data_sample/tareas_antes_despues.csv)
+👉 En resumen: ¿cuánto dinero me ahorra la IA comparado con lo que me cuesta?
 
---hourly-rate → coste/hora del equipo (€/h)
+▶️ Ejecución en una sola línea
 
---ai-monthly → coste mensual de la solución IA (licencia/inferencia), € (si no aplica, 0)
+Una vez configurado Python y dependencias:
 
---outdir → carpeta de salida (ej: results)
-
---currency → moneda (defecto: EUR)
-
-Fórmulas por tarea (mensual):
-
-ahorro_minutos = minutos_antes − minutos_despues
-
-ahorro_% = ahorro_minutos / minutos_antes
-
-coste_base = (minutos_antes × volumen_mensual × hourly_rate) / 60
-
-coste_ia_operativo = (minutos_despues × volumen_mensual × hourly_rate) / 60
-
-coste_ia_licencia = reparto_proporcional(ai_monthly, volumen_mensual)
-
-coste_ia_total = coste_ia_operativo + coste_ia_licencia
-
-beneficio = coste_base − coste_ia_total
-
-ROI_% = (beneficio / coste_ia_total) × 100 (si coste_ia_total > 0)
-
-▶️ Cómo ejecutar
-# Instalar dependencias
-pip install -r paso-1-medir-ahorro-tiempo/requirements.txt
-
-# Ejecutar cálculo
-python paso-1-medir-ahorro-tiempo/scripts/compute_roi.py \
-  --input paso-1-medir-ahorro-tiempo/data_sample/tareas_antes_despues.csv \
-  --hourly-rate 25 \
-  --ai-monthly 50 \
-  --outdir paso-1-medir-ahorro-tiempo/results \
-  --currency EUR
+python automatizacionRoi/paso-1-medir-ahorro-tiempo/scripts/compute_roi.py --input automatizacionRoi/paso-1-medir-ahorro-tiempo/data_sample/tareas_antes_despues.csv --hourly-rate 25 --ai-monthly 50 --outdir automatizacionRoi/paso-1-medir-ahorro-tiempo/results --currency EUR
 
 
-Salidas en results/:
+Donde:
 
-kpis_por_tarea.csv → métricas por tarea + fila TOTAL
+--hourly-rate = coste de la hora de trabajo (ej: 25 €).
 
-resumen_roi.md → resumen ejecutivo con:
+--ai-monthly = coste mensual de la IA (ej: 50 €).
 
-Ahorro medio ponderado (min y %)
+--currency = moneda (EUR, USD…).
 
-Coste base vs. coste IA total
+📊 Resultados que obtendrás
 
-Beneficio mensual estimado
+Archivo CSV (kpis_por_tarea.csv) → con todos los cálculos por tarea y una fila final con los totales.
 
-ROI%
+Cuánto tiempo ahorra cada tarea.
 
-📊 KPIs sugeridos
+Cuánto dinero se ahorra.
 
-Ahorro medio ponderado (min/%) por tarea
+ROI por tarea y global.
 
-Horas liberadas/mes = (ahorro_minutos × volumen_mensual) / 60
+Resumen en Markdown (resumen_roi.md) → un informe ejecutivo listo para enviar:
 
-Beneficio mensual por tarea y total
+Ejemplo de salida:
 
-ROI% total
+# Resumen ROI
+- **Ahorro medio ponderado:** 16.4 min (44.2%)
+- **Coste base mensual:** 806.25 EUR
+- **Coste IA total mensual:** 508.33 EUR
+- **Beneficio mensual:** 297.92 EUR
+- **ROI%:** 58.6%
 
-% de tareas con ROI% > 0 y % con ROI% > 50
+✅ Control de calidad y buenas prácticas
 
-✅ Control de calidad
+Verifica que siempre minutos_despues ≤ minutos_antes.
 
-Validar que minutos_despues ≤ minutos_antes
+Asegúrate de que volumen_mensual > 0.
 
-Revisar que todas las columnas sean numéricas y sin valores vacíos
+Si los resultados parecen “demasiado buenos”, revisa que los tiempos medidos sean reales.
 
-volumen_mensual > 0 para promedios ponderados
+Haz pruebas de sensibilidad: cambia el coste de hora o la licencia en ±20% para ver si el ROI sigue siendo positivo.
 
-Sensibilidad: probar --hourly-rate y --ai-monthly con ±20%
+🛠️ Problemas comunes
 
-Identificar tareas con impacto desproporcionado (outliers)
+“No such file or directory” → revisa que la ruta al CSV es correcta.
 
-🛠️ Solución de problemas
+ROI = NaN → pasa si el coste IA total es cero (p.ej., --ai-monthly 0).
 
-“No such file or directory” → revisar ruta en --input
+Beneficio negativo → significa que la IA cuesta más de lo que ahorra → replantear volumen, prompts o plan de licencia.
 
-NaN/Inf en resultados → hay celdas vacías o no numéricas
+Resultados poco claros → añade más tareas y volumen para mayor robustez.
 
-ROI% = NaN → coste_ia_total = 0; usar beneficio absoluto o definir coste mínimo
+📌 Conclusión del Paso 1
 
-Beneficio negativo con ahorro positivo → la licencia/operación IA supera el ahorro; revisar ai-monthly o volumen
+En este paso:
 
-Resultados demasiado buenos → validar con cronometraje (time & motion), logs o muestreo manual
+Tradujimos minutos ahorrados → euros ahorrados.
 
-Licencia: MIT — Usa datos anónimos/sintéticos en data_sample/ y evita subir información sensible.
+Creamos un ROI% simple y defendible.
+
+Obtuvimos un primer informe auditable que cualquier directivo puede leer.
+
+👉 Con esto ya tenemos el primer bloque sólido de la Fase 2: demostrar con datos concretos que la IA no solo es “innovación”, sino valor económico real.
 
