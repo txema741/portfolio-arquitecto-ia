@@ -1,4 +1,5 @@
 
+
 ---
 
 # `arquitectura-escalable/README.md` – **Operativo (Mes 3)**
