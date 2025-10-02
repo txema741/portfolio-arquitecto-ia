@@ -1,0 +1,4 @@
+Tarea,Tiempo_Antes(h),Tiempo_Despues(h),Ahorro(h),ROI,Tipo_Error,Antes(errores),Despues(errores),Reducción(%),CoPQ_Estimado(EUR)
+Informe mensual,10,6,4,0.25,Crítico,50,32,0.36,5000
+Gestión emails,15,8,7,0.3,Mayor,120,95,0.21,2400
+Atención clientes,20,14,6,0.12,Menor,300,240,0.2,900
