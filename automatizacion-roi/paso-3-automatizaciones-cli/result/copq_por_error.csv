@@ -1,0 +1,4 @@
+Tipo_Error,Antes(errores),Despues(errores),Reducción(%),CoPQ_Estimado(EUR)
+Crítico,50,32,0.36,5000
+Mayor,120,95,0.21,2400
+Menor,300,240,0.2,900
