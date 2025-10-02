@@ -33,6 +33,7 @@ paso-5-orquestacion/
 Ejecución local
 python paso-5-orquestacion/pipeline.py --config paso-5-orquestacion/configs/params.json
 
+
 Ejemplo de params.json
 {
   "hourly_rate": 25,
@@ -63,7 +64,6 @@ kpi_dashboard.html → Dashboard exportado.
 Para verificar que el pipeline corre sin errores y genera todos los outputs:
 
 pytest paso-5-orquestacion/tests/test_pipeline.py -q
-
 
 El test comprueba:
 
