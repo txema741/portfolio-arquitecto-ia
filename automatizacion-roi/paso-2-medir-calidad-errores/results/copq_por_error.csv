@@ -1,0 +1,6 @@
+tipo_error,frec_mensual,tiempo_correccion_min,coste_hora,impacto_reputacional,coste_correccion,coste_reputacional,coste_total,horas_perdidas
+Duplicados en base de clientes,25,10.0,25.0,50.0,104.16666666666666,1250,1354.1666666666667,4.166666666666667
+Errores en direcciones de envío,15,12.0,25.0,30.0,75.0,450,525.0,3.0
+Datos incompletos en contratos,8,20.0,30.0,80.0,80.0,640,720.0,2.6666666666666665
+Errores en facturación,5,25.0,40.0,100.0,83.33333333333334,500,583.3333333333334,2.0833333333333335
+TOTAL,53,13.49056603773585,27.169811320754718,53.58490566037736,342.5,2840,3182.5000000000005,11.916666666666668
