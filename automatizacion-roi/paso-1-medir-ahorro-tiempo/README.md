@@ -1,120 +1,135 @@
-# Paso 2 — Medir Calidad y Errores → CoPQ (*Cost of Poor Quality – Coste de Mala Calidad*)
+# Paso 1 — Medir Ahorro de Tiempo → ROI (*Return on Investment – Retorno de la Inversión*) mínimo viable
 
-Este paso mide el impacto de los **errores y la calidad de los datos o procesos** en términos económicos. A partir de métricas de calidad, se calcula el **CoPQ** y su traducción a pérdidas evitables.
+Este paso convierte minutos ahorrados por tarea en **ROI** y **KPIs (*Key Performance Indicators – Indicadores Clave de Desempeño*)** auditables. Es el **MVP (*Minimum Viable Product – Producto Mínimo Viable*)** para demostrar impacto económico antes de escalar.
 
 ---
 
 ## 📦 Estructura del paso
 ```plaintext
-paso-2-medir-calidad-errores/
+paso-1-medir-ahorro-tiempo/
 ├── README.md                      # Este archivo
 ├── requirements.txt               # Dependencias (pandas, numpy)
 ├── data_sample/
-│   └── errores_registro.csv       # Datos de ejemplo
+│   └── tareas_antes_despues.csv   # Datos de ejemplo
 ├── scripts/
-│   └── compute_copq.py            # Script de cálculo
+│   └── compute_roi.py             # Script de cálculo
 ├── results/
-│   └── (copq_por_dimension.csv, resumen_copq.md)
+│   └── (kpis_por_tarea.csv, resumen_roi.md)
 └── tests/
-    └── test_compute_copq.py       # Tests mínimos (opcional)
+    └── test_compute_roi.py        # Tests mínimos (opcional)
 
 📥 Datos de entrada
 
-Archivo CSV de ejemplo (data_sample/errores_registro.csv):
-dimension,total_registros,errores,impacto_unitario
-Clientes,1000,50,20
-Pedidos,500,25,15
-Facturas,200,10,50
+Archivo CSV de ejemplo (data_sample/tareas_antes_despues.csv):
+
+tarea,minutos_antes,minutos_despues,volumen_mensual
+Redacción de informe mensual,45,20,10
+Limpieza de datos,30,12,20
+Preparación de presentación,60,40,6
+Revisión de contratos,35,28,15
+
 
 Esquema requerido:
 
-dimension → área analizada (clientes, pedidos, facturas, etc.)
+tarea → nombre de la actividad
 
-total_registros → número de registros evaluados
+minutos_antes → duración promedio antes de IA
 
-errores → número de errores detectados
+minutos_despues → duración promedio después de IA
 
-impacto_unitario → coste medio asociado a cada error (€)
+volumen_mensual → frecuencia de la tarea al mes
 
 🧮 Parámetros y fórmulas
 
-Parámetros CLI del script compute_copq.py:
+Parámetros CLI del script compute_roi.py:
 
---input → ruta al CSV (ej: data_sample/errores_registro.csv)
+--input → ruta al CSV (ej: data_sample/tareas_antes_despues.csv)
+
+--hourly-rate → coste/hora del equipo (€/h)
+
+--ai-monthly → coste mensual de la solución IA (licencia/inferencia), € (si no aplica, 0)
 
 --outdir → carpeta de salida (ej: results)
 
 --currency → moneda (defecto: EUR)
 
-Fórmulas por dimensión:
+Fórmulas por tarea (mensual):
 
-error_rate = errores / total_registros
+ahorro_minutos = minutos_antes − minutos_despues
 
-coste_errores = errores × impacto_unitario
+ahorro_% = ahorro_minutos / minutos_antes
 
-copq_pct = (coste_errores / (total_registros × impacto_unitario)) × 100
+coste_base = (minutos_antes × volumen_mensual × hourly_rate) / 60
 
-Fórmulas globales:
+coste_ia_operativo = (minutos_despues × volumen_mensual × hourly_rate) / 60
 
-errores_totales = Σ errores
+coste_ia_licencia = reparto_proporcional(ai_monthly, volumen_mensual)
 
-coste_total_errores = Σ coste_errores
+coste_ia_total = coste_ia_operativo + coste_ia_licencia
 
-error_rate_global = errores_totales / Σ total_registros
+beneficio = coste_base − coste_ia_total
 
+ROI_% = (beneficio / coste_ia_total) × 100 (si coste_ia_total > 0)
+
+▶️ Cómo ejecutar
 # Instalar dependencias
-pip install -r paso-2-medir-calidad-errores/requirements.txt
+pip install -r paso-1-medir-ahorro-tiempo/requirements.txt
 
 # Ejecutar cálculo
-python paso-2-medir-calidad-errores/scripts/compute_copq.py \
-  --input paso-2-medir-calidad-errores/data_sample/errores_registro.csv \
-  --outdir paso-2-medir-calidad-errores/results \
+python paso-1-medir-ahorro-tiempo/scripts/compute_roi.py \
+  --input paso-1-medir-ahorro-tiempo/data_sample/tareas_antes_despues.csv \
+  --hourly-rate 25 \
+  --ai-monthly 50 \
+  --outdir paso-1-medir-ahorro-tiempo/results \
   --currency EUR
+
 
 Salidas en results/:
 
-copq_por_dimension.csv → métricas de CoPQ por cada dimensión
+kpis_por_tarea.csv → métricas por tarea + fila TOTAL
 
-resumen_copq.md → resumen ejecutivo con:
+resumen_roi.md → resumen ejecutivo con:
 
-Tasa de errores por dimensión y global
+Ahorro medio ponderado (min y %)
 
-Coste económico estimado de la mala calidad
+Coste base vs. coste IA total
 
-% de pérdida sobre el total
+Beneficio mensual estimado
+
+ROI%
 
 📊 KPIs sugeridos
 
-Tasa de error por dimensión = errores / total_registros
+Ahorro medio ponderado (min/%) por tarea
 
-Errores totales detectados
+Horas liberadas/mes = (ahorro_minutos × volumen_mensual) / 60
 
-Coste económico de los errores (€)
+Beneficio mensual por tarea y total
 
-CoPQ % sobre volumen total
+ROI% total
 
-Reducción de errores tras IA (comparativa antes/después)
+% de tareas con ROI% > 0 y % con ROI% > 50
 
 ✅ Control de calidad
 
-Validar que errores ≤ total_registros
+Validar que minutos_despues ≤ minutos_antes
 
-Revisar que impacto_unitario ≥ 0
+Revisar que todas las columnas sean numéricas y sin valores vacíos
 
-Evitar valores vacíos o no numéricos
+volumen_mensual > 0 para promedios ponderados
 
-Comprobar que la suma global de errores coincide con el detalle por dimensión
+Sensibilidad: probar --hourly-rate y --ai-monthly con ±20%
 
-Hacer pruebas de sensibilidad variando impacto_unitario ±20%
+Identificar tareas con impacto desproporcionado (outliers)
 
 🛠️ Solución de problemas
 
 “No such file or directory” → revisar ruta en --input
 
-Valores negativos → revisar columnas errores e impacto_unitario
+NaN/Inf en resultados → hay celdas vacías o no numéricas
 
-Tasas de error >100% → revisar que errores ≤ total_registros
+ROI% = NaN → coste_ia_total = 0; usar beneficio absoluto o definir coste mínimo
 
-Resultados nulos → puede que errores = 0; en ese caso, el CoPQ es 0%
+Beneficio negativo con ahorro positivo → la licencia/operación IA supera el ahorro; revisar ai-monthly o volumen
 
-Costes incoherentes → validar impacto_unitario con negocio (ej: coste por retrabajo, penalizaciones, reclamaciones)
+Resultados demasiado buenos → validar con cronometraje (time & motion), logs o muestreo manual
