@@ -133,3 +133,5 @@ ROI% = NaN → coste_ia_total = 0; usar beneficio absoluto o definir coste míni
 Beneficio negativo con ahorro positivo → la licencia/operación IA supera el ahorro; revisar ai-monthly o volumen
 
 Resultados demasiado buenos → validar con cronometraje (time & motion), logs o muestreo manual
+
+icencia: MIT — Usa datos anónimos/sintéticos en data_sample/ y evita subir información sensible.
