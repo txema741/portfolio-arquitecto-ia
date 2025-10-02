@@ -12,8 +12,9 @@ Implementar el **módulo de ejecución automatizada** que toma los resultados de
 
 ---
 
-## ⚙️ Scripts y Estructura  
+## ⚙️ Scripts y Estructura 
 
+```bash
 automatizacionRoi/
 └── paso-4-dashboards-kpi/
     ├── README.md
@@ -35,6 +36,7 @@ automatizacionRoi/
         ├── test_generate_reports.py
         ├── test_dashboard.py
         └── test_charts.py
+
 
 
 ---
